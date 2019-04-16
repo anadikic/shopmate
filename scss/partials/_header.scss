@@ -9,11 +9,18 @@
 		}
 		.left {
 			display: flex;
+			font-family: $font-default;
+			color: $dark;
+			font-size: 15px;
+			font-weight: 700;
+			a {
+				color: $pink;
+			}
 		}
 		.link-wrapper {
 			display: flex;
 		}
-		
+	
 	}
 	.logo {
 		font-family: 'Montserrat', sans-serif;
