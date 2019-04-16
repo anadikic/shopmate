@@ -1,0 +1,139 @@
+@font-face {
+	font-family: "svgicons";
+	src: url('../fonts/svgicons.eot');
+	src: url('../fonts/svgicons.eot?#iefix') format('eot'),
+		url('../fonts/svgicons.woff') format('woff'),
+		url('../fonts/svgicons.ttf') format('truetype');
+}
+
+@mixin font-styles {
+	font-family: "svgicons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%font {
+	@include font-styles;
+}
+
+@function font-char($filename) {
+	$char: "";
+
+	@if $filename == envelope {
+		$char: "\E001";
+	}
+	@if $filename == facebook-logo {
+		$char: "\E002";
+	}
+	@if $filename == ico-arrow-down {
+		$char: "\E003";
+	}
+	@if $filename == ico-close {
+		$char: "\E004";
+	}
+	@if $filename == ico-correct {
+		$char: "\E005";
+	}
+	@if $filename == ico-favorite-heart {
+		$char: "\E006";
+	}
+	@if $filename == ico-heart {
+		$char: "\E007";
+	}
+	@if $filename == ico-minus {
+		$char: "\E008";
+	}
+	@if $filename == ico-play {
+		$char: "\E009";
+	}
+	@if $filename == ico-plus {
+		$char: "\E00A";
+	}
+	@if $filename == instagram-logo {
+		$char: "\E00B";
+	}
+	@if $filename == pinterest-logo {
+		$char: "\E00C";
+	}
+	@if $filename == search {
+		$char: "\E00D";
+	}
+	@if $filename == shopping-bag {
+		$char: "\E00E";
+	}
+	@if $filename == sprite {
+		$char: "\E00F";
+	}
+	@if $filename == twitter {
+		$char: "\E010";
+	}
+
+	@return $char;
+}
+
+@mixin font($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %font;
+		} @else {
+			@include font-styles;
+		}
+		content: font-char($filename);
+	}
+}
+
+.font-envelope {
+	@include font(envelope);
+}
+.font-facebook-logo {
+	@include font(facebook-logo);
+}
+.font-ico-arrow-down {
+	@include font(ico-arrow-down);
+}
+.font-ico-close {
+	@include font(ico-close);
+}
+.font-ico-correct {
+	@include font(ico-correct);
+}
+.font-ico-favorite-heart {
+	@include font(ico-favorite-heart);
+}
+.font-ico-heart {
+	@include font(ico-heart);
+}
+.font-ico-minus {
+	@include font(ico-minus);
+}
+.font-ico-play {
+	@include font(ico-play);
+}
+.font-ico-plus {
+	@include font(ico-plus);
+}
+.font-instagram-logo {
+	@include font(instagram-logo);
+}
+.font-pinterest-logo {
+	@include font(pinterest-logo);
+}
+.font-search {
+	@include font(search);
+}
+.font-shopping-bag {
+	@include font(shopping-bag);
+}
+.font-sprite {
+	@include font(sprite);
+}
+.font-twitter {
+	@include font(twitter);
+}
+

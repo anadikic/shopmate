@@ -1,0 +1,109 @@
+//----------  responsive breakpoints
+//------------------------------------------------------------------------------
+@mixin breakpoint ($value) {
+	@if $value == 'phone' {
+		@media only screen and (min-width: 120px) and (max-width: 767px) { @content; }
+	} @else if $value == 'tablet' {
+		@media only screen and (min-width: 768px) and (max-width: 1024px) { @content; }
+	} @else if $value == 'touch' {
+		@media only screen and (min-width: 120px) and (max-width: 1024px) { @content; }
+	} @else if $value == 'desktop' {
+		@media only screen and (min-width: 1025px) { @content; }
+	} @else {
+		@media only screen and (max-width: $value) { @content; }
+	}
+}
+
+//----------  font smoothing
+//------------------------------------------------------------------------------
+@mixin font-smoothing ($val: antialiased) {
+	-webkit-font-smoothing: $val;
+	-moz-font-smoothing: $val;
+	-ms-font-smoothing: $val;
+	-o-font-smoothing: $val;
+}
+
+//----------  input placeholder
+//------------------------------------------------------------------------------
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&::-ms-input-placeholder {
+		@content;
+	}
+}
+
+//----------  base float
+//------------------------------------------------------------------------------
+@mixin base-float {
+	width: 100%;
+	float: left;
+}
+
+//----------  Text Overflow
+//------------------------------------------------------------------------------
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+//----------  Vertical / horizontal alignment
+//------------------------------------------------------------------------------
+@mixin align($position: relative, $direction: x) {
+	position: $position;
+	@if ($direction == 'y') {
+		top: 50%;
+		transform: translateY(-50%);
+	} @else if ($direction == 'xy') {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+// example: @include align(absolute, xy); for centering both axis'
+// default @include align(); will be relative on x axis
+
+//---------- svg sprite
+//------------------------------------------------------------------------------
+
+
+
+/// Create a map with the specified icon of attributes
+/// @param {string} $icon - The name of the icon
+@function icon-attr($icon) {
+	$attr: (
+		width: sprite-attr($icon, width),
+		height: sprite-attr($icon, height),
+		x: sprite-attr($icon, backgroundX),
+		y: sprite-attr($icon, backgroundY)
+	);
+
+	@return $attr;
+}
+
+// Get the width of an icon in em
+// @param {string} $icon - The name of the icon
+@function icon-width($icon) {
+	@return sprite-attr($icon, width);
+}
+
+// Get the height of an icon in em
+// @param {string} $icon - The name of the icon
+@function icon-height($icon) {
+	@return sprite-attr($icon, height);
+}
+

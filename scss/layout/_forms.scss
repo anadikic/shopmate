@@ -1,0 +1,362 @@
+//----------  forms
+//------------------------------------------------------------------------------
+input,
+textarea {
+	@include placeholder {
+		color: $black;
+	}
+
+	font-family: $font-default;
+	border-radius: 0;
+	box-shadow: none;
+	background: $white;
+	height: 25px;
+	padding: 0 10px;
+	color: $black;
+}
+
+input,
+select {
+	height: 48px;
+	font-size: 16px;
+	line-height: 48px;
+	border: 1px solid #bababa;
+	border-radius: 50px;
+	font-weight: 700;
+
+	@include placeholder {
+		color: $grey;
+	}
+}
+
+form {
+	&.subscribe {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		input[type='text'] {
+			border: 0;
+			height: 46px;
+			padding: 0;
+			@include placeholder {
+				color: #bababa;
+			}
+		}
+
+		.input-wrapper {
+			padding: 0 20px;
+			height: 48px;
+			border: 1px solid #bababa;
+			flex: 1;
+			margin-right: 20px;
+			border-radius: 50px;
+			font-weight: 700;
+			display: flex;
+			background-color: $white;
+
+			i {
+				font-size: 20px;
+				margin-right: 15px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #bababa;
+			}
+		}
+	}
+
+	input[type='checkbox'] {
+		display: none;
+
+		&+label {
+			padding-left: 30px;
+			line-height: 30px;
+			position: relative;
+			display: inline-block;
+
+			&::before {
+				content: '';
+				width: 20px;
+				height: 20px;
+				background-color: $orange;
+				display: block;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+		}
+
+		&:checked {
+			&+label {
+				@include font(ico-correct, after);
+
+				&::after {
+					color: $white;
+					font-size: 16px;
+					margin: 2px;
+					display: block;
+					position: absolute;
+					top: 5px;
+					left: 5px;
+					line-height: 16px;
+				}
+			}
+		}
+	}
+
+	input[type='radio'] {
+		display: none;
+
+		&+label {
+			padding-left: 30px;
+			line-height: 30px;
+			position: relative;
+			display: inline-block;
+
+			&::before {
+				content: '';
+				width: 20px;
+				height: 20px;
+				border-radius: 20px;
+				background-color: $orange;
+				display: block;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+		}
+
+		&:checked {
+			&+label {
+				@include font(ico-correct, after);
+
+				&::after {
+					color: $white;
+					font-size: 14px;
+					margin: 3px;
+					display: block;
+					position: absolute;
+					top: 5px;
+					left: 5px;
+					line-height: 14px;
+				}
+			}
+		}
+	}
+}
+
+select {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	width: 100%;
+	border: 1px solid $grey-light;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding-right: 28px;
+	background-color: $white;
+	-webkit-appearance: none; // reset default style for iOS
+	background-image: url('../svg/ico-arrow-down.svg');
+	background-position: right 10px center;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	border-radius: 0; // again, removes border radius for iOS
+
+	&::after {
+		display: block;
+		position: absolute;
+		color: $grey;
+		width: 20px;
+		height: 20px;
+		right: 5px;
+		top: 5px;
+		font-size: 20px;
+		line-height: 20px;
+		transition: 0.2s linear;
+	}
+}
+
+// custom css for customFileInput function
+.custom-input {
+	border: 1px solid $grey-light;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2px;
+	border-radius: 4px;
+
+	.input-path {
+		font-style: italic;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		padding-left: 10px;
+	}
+
+
+	.fake-button {
+		padding: 10px 20px;
+		background-color: $orange;
+		color: $white;
+		display: block;
+
+		&:hover {
+			background-color: darken($orange, 10);
+		}
+
+	}
+}
+
+
+// custom css for selectIt plugin
+.select-it-wrapper {
+	width: 100%;
+	position: relative;
+	float: left;
+
+	.select-it-result {
+		@include font(ico-arrow-down, after);
+
+		height: 30px;
+		line-height: 30px;
+		padding-left: 10px;
+		width: 100%;
+		border: 1px solid $grey-light;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		padding-right: 28px;
+
+		&::after {
+			display: block;
+			position: absolute;
+			color: $grey;
+			width: 20px;
+			height: 20px;
+			right: 5px;
+			top: 5px;
+			font-size: 20px;
+			line-height: 20px;
+			transition: 0.2s linear;
+		}
+
+		&.open {
+			&::after {
+				transform: rotate(-180deg);
+			}
+
+			+ul.select-it-list {
+				max-height: 300px;
+				overflow-y: auto;
+				opacity: 1;
+			}
+		}
+	}
+
+	.select-it-list {
+		border: 1px solid $grey-light;
+		border-top: 0;
+		transition: 0.2s linear;
+		max-height: 0;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+		background: $white;
+		z-index: 2;
+
+		.search-box {
+			position: relative;
+
+			input {
+				outline: 0;
+				border: 0;
+				height: 28px;
+				line-height: 28px;
+				float: left;
+				font-family: 'Source Sans Pro', sans-serif;
+				padding-left: 10px;
+				border-bottom: 1px solid $grey-light;
+				width: 100%;
+
+				&.original {
+					position: relative;
+					z-index: 2;
+					background-color: transparent;
+				}
+
+				&.completer {
+					position: absolute;
+					color: $grey;
+				}
+			}
+		}
+
+		li {
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			border-bottom: 1px solid $grey-light;
+			list-style-type: none;
+			padding-left: 10px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			cursor: pointer;
+			position: relative;
+
+			>label {
+				top: 0;
+				position: absolute;
+				left: 0;
+			}
+
+			&:hover {
+				background-color: $grey-light;
+			}
+		}
+
+		&.multiple-select {
+			li {
+				padding-left: 35px;
+			}
+		}
+	}
+
+}
+
+.button,
+input[type='submit'] {
+	padding: 0 20px;
+	background: $white;
+	color: $pink;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 50px;
+	height: 48px;
+	line-height: 48px;
+	border: 1px solid $white;
+	transition: background-color 0.3s ease;
+
+	&.pink {
+		background-color: $pink;
+		color: $white;
+		border-color: $pink;
+
+		&:hover {
+			background-color: $white;
+			color: $pink;
+			border-color: $pink;
+		}
+	}
+
+	&:hover {
+		background-color: $pink;
+		color: $white;
+		border-color: $pink;
+	}
+}

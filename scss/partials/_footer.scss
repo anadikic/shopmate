@@ -1,0 +1,113 @@
+//----------  footer
+//------------------------------------------------------------------------------
+.footer {
+	padding-top: 50px;
+	padding-bottom: 40px;
+	@include base-float;
+	background: $white;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	nav {
+		ul {
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: 30px;
+		}
+
+		li {
+			a {
+				font-size: 24px;
+			}
+		}
+	}
+
+	ul.social {
+		display: flex;
+		width: 205px;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+
+		a {
+			background-color: #e2e2e2;
+			height: 40px;
+			width: 40px;
+			color: $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+
+			i {
+				color: $white;
+				font-size: 25px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&:hover {
+				background-color: #b4b4b4;
+			}
+		}
+	}
+
+	.bottom {
+		display: flex;
+		color: #7f7f7f;
+
+		a {
+			color: #7f7f7f;
+			margin: 0 10px;
+			display: flex;
+			align-items: center;
+
+			&::before {
+				content: '';
+				display: block;
+				background-color: #7f7f7f;
+				height: 3px;
+				width: 3px;
+				border-radius: 50%;
+				margin-right: 3px;
+			}
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+
+	&.dark {
+		background-color: $dark;
+		nav li a {
+			color: $white;
+			&:hover {
+				color: $pink;
+			}
+		}
+		.social {
+			li a {
+				background-color: #f7f7f7;
+				i {
+					color: $dark;
+				}
+				&:hover {
+					background-color: $white;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		nav {
+			flex-wrap: wrap;
+		}
+		.bottom {
+			flex-direction: column;
+		}
+	}
+}

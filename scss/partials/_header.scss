@@ -1,0 +1,137 @@
+.header {
+	background-color: $white;
+
+	.wrapper {
+		position: relative;
+	}
+	.logo {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 24px;
+		font-weight: 700;
+		margin-right: 60px;
+		color: $pink;
+		letter-spacing: 4px;
+	}
+	.bottom {
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+		.left {
+			display: flex;
+			align-items: center;
+		}
+		.right {
+			display: flex;
+			align-items: center;
+			a {
+				font-size: 20px;
+				i {
+					font-size: 20px;
+				}
+			}
+		}
+		.search-wrapper {
+			z-index: 10;
+			position: relative;
+		}
+		.search {
+			margin-right: 30px;
+		}
+		.search-input-wrapper {
+			display: none;
+			position: absolute;
+			right: 15px;
+			top: 48px;
+			padding: 9px;
+			background-color: $white;
+			box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
+
+		}
+		.search-input-wrapper .inner {
+			height: 48px;
+			font-size: 16px;
+			line-height: 48px;
+			border: 1px solid #bababa;
+			border-radius: 50px;
+			font-weight: 700;
+			display: flex;
+			align-items: center;
+			padding: 0 20px;
+		}
+		.search-input-wrapper .inner a {
+			display: flex;
+			align-items: center;
+		}
+		input {
+			border: 0;
+			height: 36px;
+		}
+	}
+}
+.main-nav {
+	@include base-float;
+
+	ul {
+		@include base-float;
+
+		li {
+			float: left;
+			height: 36px;
+			line-height: 36px;
+			border-radius: 5px;
+			position: relative;
+			font-family: Montserrat;
+			font-size: 15px;
+			font-weight: 700;
+			margin-right: 35px;
+
+
+			&:hover,
+			&.active {
+				a {
+					color: darken($pink, 10%);
+				}
+			}
+
+			.invisible-line {
+				display: none;
+				width: 100%;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				background: transparent;
+				height: 10px;
+			}
+
+			a {
+				color: #2e2e2e;
+				display: block;
+				padding: 0 15px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.header {
+		.logo {
+			margin-right: 30px;
+		}
+	}
+}
+@media only screen and (max-width: 991px) {
+	.header {
+		.logo {
+			margin-right: 30px;
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.header {
+		.logo {
+			margin-right: 30px;
+		}
+	}
+}

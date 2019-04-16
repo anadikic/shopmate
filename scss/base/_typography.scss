@@ -1,0 +1,17 @@
+//----------  typography
+//------------------------------------------------------------------------------
+
+h1 {
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 700;
+	color: $white;
+}
+
+// Icon font
+[class*='font-'] {
+	display: inline-block;
+	font-size: 30px;
+	color: $black;
+	line-height: 1;
+}

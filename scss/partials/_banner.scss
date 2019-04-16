@@ -1,0 +1,47 @@
+.banner {
+    .item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .wrapper {
+        height: 480px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    h1 {
+        color: $white;
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    p {
+        color: $white;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: center;
+        max-width: 530px;
+        margin-bottom: 20px;
+    }
+    .owl-dots {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .owl-dot {
+            width: 12px;
+            height: 12px;
+            border: 2px solid $white;
+            margin-right: 5px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            &.active {
+                background-color: $white;
+            }
+        }
+    }
+}
