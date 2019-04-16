@@ -3,9 +3,12 @@
 		position: relative;
 	}
 	.top {
+		padding-top: 12px;
+		padding-bottom: 12px;
 		.wrapper {
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
 		}
 		.left {
 			display: flex;
@@ -13,14 +16,41 @@
 			color: $dark;
 			font-size: 15px;
 			font-weight: 700;
+			align-items: center;
 			a {
 				color: $pink;
+				margin-right: 5px;
+			}
+			h3 {
+				font-weight: 700;
+				margin-right: 5px;
 			}
 		}
 		.link-wrapper {
 			display: flex;
 		}
-	
+		ul {
+			li {
+				margin-right: 15px;
+				a {
+					color: $dark;
+					font-size: 15px;
+					font-weight: bold;
+				}
+			}
+		}
+		.price {
+			font-weight: 700;
+		}
+		.currency {
+			display: flex;
+			align-items: center;
+		}
+		.right {
+			display: flex;
+			align-items: center;
+			font-weight: 700;
+		}
 	}
 	.logo {
 		font-family: 'Montserrat', sans-serif;
@@ -45,12 +75,6 @@
 		.right {
 			display: flex;
 			align-items: center;
-			a {
-				font-size: 20px;
-				i {
-					font-size: 20px;
-				}
-			}
 		}
 		.search-wrapper {
 			z-index: 10;
@@ -63,11 +87,18 @@
 			display: none;
 			position: absolute;
 			right: 15px;
-			top: 48px;
+			top: -15px;
 			padding: 9px;
 			background-color: $white;
-			box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
 
+		}
+		.close-btn .close {
+			top: 24px;
+		}
+		.close-btn i::before,
+		.close-btn i::after {
+			height: 14px;
+			top: 3px;
 		}
 		.search-input-wrapper .inner {
 			height: 48px;
@@ -87,6 +118,61 @@
 		input {
 			border: 0;
 			height: 36px;
+		}
+		&.dark {
+			background-color: $dark;
+			.main-nav {
+				ul li a {
+					color: $white;
+				}
+			}
+			.search i {
+				color: $white;
+			}
+			.bag {
+				.font-shopping-bag {
+					color: $white;
+				}
+			}
+			.search-input-wrapper {
+				background-color: $dark;
+				.inner {
+					background-color: #bababa;
+					input {
+						background-color: #bababa;
+						@include placeholder {
+							color: $white;
+						}
+					}
+					.search-btn .font-search,
+					.close-btn .close {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	a i.items-number {
+        position: absolute;
+        width: 17px;
+        height: 19px;
+        background-color: $pink;
+        color: $white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -8px;
+        right: -8px;
+        font-size: 14px;
+        font-family: Montserrat;
+		font-weight: 700;
+    }
+    .bag {
+        position: relative;
+		margin-right: 15px;
+		.font-shopping-bag {
+			font-size: 20px;
 		}
 	}
 }

@@ -1,25 +1,5 @@
 .header .chart-wrapper {
     z-index: 9;
-    a i.items-number {
-        position: absolute;
-        width: 22px;
-        height: 24px;
-        background-color: $pink;
-        color: $white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: -15px;
-        right: -13px;
-        font-size: 16px;
-        font-family: Montserrat;
-        font-weight: 700;
-    }
-    .bag {
-        position: relative;
-        margin-right: 15px;
-    }
     .chart {
         display: none;
         position: absolute;

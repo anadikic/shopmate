@@ -1,6 +1,8 @@
 .details {
     .wrapper {
+        background-color: $white;
         display: flex;
+        padding: 59px;
     }
     .right {
         width: 50%;
@@ -23,6 +25,9 @@
         display: block;
         float: none;
     }
+}
+.item .header {
+    margin-bottom: 24px;
 }
 .item .related {
     .wrapper {

@@ -103,8 +103,12 @@
 		}
 	}
 	@media only screen and (max-width: 767px) {
-		nav {
+		nav ul {
 			flex-wrap: wrap;
+			li {
+				width: 33%;
+				margin-right: 0;
+			}
 		}
 		.bottom {
 			flex-direction: column;

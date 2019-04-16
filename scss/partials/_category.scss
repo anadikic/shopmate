@@ -5,7 +5,7 @@ section.subscribe {
         padding: 20px 0;
     }
     h2 {
-        font-size: 13px;
+        font-size: 15px;
         flex: 1;
         font-weight: 700;
     }
@@ -83,21 +83,21 @@ section.related {
                     display: block;
                 }
             }
+            .content-hover {
+                position: absolute;
+                left: 28px;
+                right: 28px;
+                top: 38px;
+                display: none;
+            }
             &:hover {
                 box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
                 cursor: pointer;
-                .content {
-                    position: absolute;
-                    left: 36px;
-                    right: 36px;
-                    width: 80%;
-                    @include align(absolute, y);
-                }
-                .buttons-wrapper {
-                    display: flex;
-                }
-                .wish-list {
+                .content-hover {
                     display: block;
+                }
+                .content {
+                    opacity: 0;
                 }
                 img {
                     filter: grayscale(100%);
@@ -107,11 +107,10 @@ section.related {
         }
     }
     .buttons-wrapper {
-        display: none;
         margin-bottom: 10px;
     }
     .wish-list {
-        display: none;
+        display: block;
     }
 }
 .static-banner {
@@ -160,5 +159,15 @@ section.main-content.related {
     }
     .item {
         margin-bottom: 20px;
+        padding: 38px 28px;
+        img {
+            max-width: 163px;
+            width: 100%;
+        }
+    }
+}
+.category {
+    .header {
+        margin-bottom: 24px;
     }
 }
