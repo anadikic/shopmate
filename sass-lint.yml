@@ -69,7 +69,6 @@ rules:
   no-qualifying-elements: 0
   no-trailing-whitespace: 2
   no-trailing-zero: 2
-  no-transition-all: 2
   no-universal-selectors: 0
   no-url-protocols: 1
   no-vendor-prefixes: 1

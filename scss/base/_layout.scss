@@ -55,3 +55,45 @@ body {
 .content {
 	@include base-float;
 }
+
+.font-ico-heart {
+	color: $pink;
+}
+
+.color-options {
+	display: flex;
+	justify-content: center;
+	span {
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		display: block;
+		margin-right: 7px;
+		&.pink {
+			background-color: $pink;
+		}
+		&.blue {
+			background-color: $blue;
+		}
+		&.green {
+			background-color: $green;
+		}
+		&.orange {
+			background-color: $orange;
+		}
+		&.yellow {
+			background-color: $yellow;
+		}
+		&.purple {
+			background-color: $purple;
+		}
+		&.green-smooth {
+			background-color: $green-smooth;
+		}
+		&.active {
+			&::before {
+				content: '';
+			}
+		}
+	}
+}

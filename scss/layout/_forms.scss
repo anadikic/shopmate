@@ -330,7 +330,8 @@ select {
 }
 
 .button,
-input[type='submit'] {
+input[type='submit'],
+a.link {
 	padding: 0 20px;
 	background: $white;
 	color: $pink;

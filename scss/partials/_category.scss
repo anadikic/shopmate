@@ -41,6 +41,7 @@ section.related {
     .wrapper {
         display: flex;
         justify-content: space-between;
+        min-height: 360px;
         .item {
             display: flex;
             flex-direction: column;
@@ -48,8 +49,9 @@ section.related {
             background: $white;
             width: 31%;
             padding: 36px;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
+            transition: all 2s ease-out;
             .content {
                 display: flex;
                 flex-direction: column;
@@ -83,30 +85,37 @@ section.related {
             }
             &:hover {
                 box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
+                cursor: pointer;
                 .content {
                     position: absolute;
                     left: 36px;
                     right: 36px;
                     width: 80%;
+                    @include align(absolute, y);
                 }
                 .buttons-wrapper {
-                    display: block;
+                    display: flex;
                 }
                 .wish-list {
                     display: block;
+                }
+                img {
+                    filter: grayscale(100%);
+                    opacity: 0.2;
                 }
             }
         }
     }
     .buttons-wrapper {
         display: none;
+        margin-bottom: 10px;
     }
     .wish-list {
         display: none;
     }
 }
 .static-banner {
-    margin-bottom: 24px;  
+    margin-bottom: 24px;
     .wrapper {
         height: 336px;
         padding: 37px 110px;
@@ -133,12 +142,23 @@ section.related {
         display: flex;
     }
 }
-section.main-content {
+section.main-content.related {
     display: flex;
     .filter {
         width: 23%;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+        .white-part {
+            background: $white;
+        }
     }
-    .items-wrpapper {
+    .items-wrapper {
         width: 72%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .item {
+        margin-bottom: 20px;
     }
 }

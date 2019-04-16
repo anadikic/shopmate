@@ -9,9 +9,13 @@
 @import 'helpers/mixins';
 @import 'helpers/helpers';
 @import 'helpers/print';
+@import 'helpers/elements';
 
 //----------  libs
 //------------------------------------------------------------------------------
+@import 'lib/jquery-ui';
+@import 'lib/slick';
+@import 'lib/slick-theme';
 
 //----------  base layout
 //------------------------------------------------------------------------------
@@ -31,5 +35,6 @@
 @import 'partials/footer';
 @import 'partials/banner';
 @import 'partials/chart';
+@import 'partials/item';
 @import 'partials/category';
 @import 'partials/main';

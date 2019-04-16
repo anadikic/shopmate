@@ -1,0 +1,36 @@
+.details {
+    .wrapper {
+        display: flex;
+    }
+    .right {
+        width: 50%;
+    }
+    .left {
+        width: 50%;
+        .for-slider .owl-item {
+            img {
+                max-width: 100%;
+            }
+        }
+        .slick-slide img {
+            max-width: 100%;
+        }
+    }
+    .breadcrumbs ul {
+        display: flex;
+    }
+    .rate {
+        display: block;
+        float: none;
+    }
+}
+.item .related {
+    .wrapper {
+        display: flex;
+        overflow-y: scroll;
+        overflow-x: visible;
+        .item {
+            margin-right: 25px;
+        }
+    }
+}

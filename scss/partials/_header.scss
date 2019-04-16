@@ -1,8 +1,19 @@
 .header {
-	background-color: $white;
-
 	.wrapper {
 		position: relative;
+	}
+	.top {
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+		.left {
+			display: flex;
+		}
+		.link-wrapper {
+			display: flex;
+		}
+		
 	}
 	.logo {
 		font-family: 'Montserrat', sans-serif;
@@ -13,6 +24,7 @@
 		letter-spacing: 4px;
 	}
 	.bottom {
+		background-color: $white;
 		.wrapper {
 			display: flex;
 			justify-content: space-between;
