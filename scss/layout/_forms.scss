@@ -121,7 +121,7 @@ form {
 			height: 38px;
 			border: 1px solid #bababa;
 			flex: 1;
-			margin-right: 20px;
+			margin-right: 9px;
 			border-radius: 50px;
 			font-weight: 700;
 			display: flex;
@@ -134,6 +134,10 @@ form {
 				justify-content: center;
 				align-items: center;
 				color: #bababa;
+			}
+			input[type='submit'] {
+				padding-left: 38px;
+				padding-right: 38px;
 			}
 		}
 	}

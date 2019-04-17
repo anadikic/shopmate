@@ -100,12 +100,12 @@
 		}
 		.close-btn .close {
 			top: 19px;
+			right: 29px;
 		}
 		.close-btn i::before,
 		.close-btn i::after {
 			height: 14px;
 			top: 3px;
-			background-color: $white;
 		}
 		.search-input-wrapper .inner {
 			height: 38px;
@@ -117,7 +117,7 @@
 			display: flex;
 			align-items: center;
 			padding: 0 20px;
-			width: 100%;
+			width: 94%;
 		}
 		.search-input-wrapper .inner a {
 			display: flex;
@@ -126,7 +126,7 @@
 		input {
 			border: 0;
 			height: 36px;
-			width: 100%;
+			width: 94%;
 		}
 		&.dark {
 			background-color: $dark;
@@ -158,6 +158,10 @@
 						color: $white;
 					}
 				}
+			}
+			.close-btn i::before,
+			.close-btn i::after {
+				background-color: $white;
 			}
 		}
 	}

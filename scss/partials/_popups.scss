@@ -59,62 +59,6 @@
                 }
             }
         }
-        .third-column {
-            width: 25%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .plus,
-            .minus {
-                width: 36px;
-                height: 36px;
-                background-color: #efefef;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: $dark;
-                position: relative;
-                &:hover {
-                    background-color: #dbdbdb;
-                }
-            }
-            .minus::before,
-            .plus::before {
-                content: '';
-                background-color: $dark;
-                width: 20px;
-                display: block;
-                height: 2px;
-            }
-            .plus {
-                &::before {
-                    position: absolute;
-                }
-                &::after {
-                    position: absolute;
-                    content: '';
-                    background-color: $dark;
-                    width: 20px;
-                    display: block;
-                    height: 2px;
-                    transform: rotate(90deg);
-                }
-            }
-            .value {
-                width: 50px;
-                height: 36px;
-                line-height: 36px;
-                border: 1px solid #efefef;
-                border-radius: 50px;
-                color: $dark;
-                display: inline-block;
-                margin: 0 4px;
-                font-size: 16px;
-                font-weight: 700;
-                text-align: center;
-            }
-        }
         .fourth-column {
             width: 15%;
             text-align: center;

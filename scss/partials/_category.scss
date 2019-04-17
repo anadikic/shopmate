@@ -178,26 +178,6 @@ section.main-content.related {
         .color-options {
             margin-bottom: 24px;
         }
-        .size-options {
-            margin-bottom: 24px;
-            display: flex;
-            flex-wrap: wrap;
-            span {
-                padding: 5px 15px;
-                color: $grey;
-                margin-bottom: 3px;
-                margin-right: 5px;
-                background-color: #f7f7f7;
-                font-size: 13px;
-                &:hover {
-                    cursor: pointer;
-                }
-                &.active {
-                    background-color: $pink;
-                    color: $white;
-                }
-            }
-        }
         #slider-range {
             margin-bottom: 24px;
             height: 3px;

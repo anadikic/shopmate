@@ -1,58 +1,232 @@
 .details {
-    .wrapper {
-        background-color: $white;
+	.wrapper {
+		background-color: $white;
+		display: flex;
+		padding: 34px 0 10px;
+	}
+
+	.right {
+		width: 49%;
+	}
+
+	.left {
+		width: 52%;
+
+		.for-slider {
+			width: 300px;
+			margin: 0 auto;
+
+			.slick-slide {
+				img {
+					width: 70px;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		.slick.slick-slider img {
+			width: 100%;
+		}
+
+		.slick-slide {
+			margin-bottom: 43px;
+
+			img {
+				width: 85%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.breadcrumbs ul {
+		display: flex;
+		margin-bottom: 16px;
+
+		li {
+			margin-right: 10px;
+
+			&:last-child {
+				a::after {
+					display: none;
+				}
+			}
+		}
+
+		li a {
+			color: #ababab;
+			position: relative;
+			padding-right: 15px;
+			display: block;
+			font-size: 14px;
+
+			&::after {
+				content: '';
+				display: block;
+				background-color: #ababab;
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				position: absolute;
+				top: 8px;
+				right: 0;
+			}
+		}
+	}
+
+	.rate {
+		display: flex;
+		float: none;
+		padding: 0;
+		height: 41px;
+	}
+
+	h2 {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 19px;
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 14px;
+	}
+
+	.color-options {
+		margin-bottom: 23px;
+	}
+
+	.third-column {
+		margin-bottom: 28px;
+	}
+
+	.button-wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 87%;
+		align-items: center;
+
+		a.link {
+			padding-left: 54px;
+			padding-right: 54px;
+			height: 60px;
+		}
+
+		a.wish {
+			font-size: 11px;
+			display: flex;
+			align-items: center;
+
+			i {
+				font-size: 20px;
+				display: flex;
+				align-items: center;
+			}
+
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+}
+
+.item .header {
+	margin-bottom: 24px;
+}
+
+.item .related {
+	.wrapper {
+		display: flex;
+
+		.item {
+			margin-right: 25px;
+		}
+	}
+}
+
+.item .reviews {
+	margin-bottom: 49px;
+
+	.wrapper {
+		padding: 42px 79px 22px;
+		box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+	}
+
+	.list {
+		border-bottom: 1px solid #bababa;
+		padding-bottom: 37px;
+		margin-bottom: 52px;
+		.item {
+			display: flex;
+		}
+		.left {
+			width: 62%;
+			display: flex;
+			flex-direction: column;
+
+			strong {
+				display: block;
+			}
+		}
+		.rate {
+			display: flex;
+			margin-bottom: 10px;
+		}
+	}
+
+	h2 {
+		font-weight: 700;
+		margin-bottom: 48px;
+	}
+}
+
+.item .add-review {
+    h2 {
+        margin-bottom: 31px;
+    }
+    .form-field {
         display: flex;
-        padding: 59px;
-    }
-    .right {
-        width: 50%;
-    }
-    .left {
-        width: 50%;
-        .for-slider .owl-item {
-            img {
-                max-width: 100%;
+        margin-bottom: 17px;
+        &>label {
+            width: 31%;
+            display: flex;
+            align-items: flex-start;
+        }
+        input[type="text"] {
+            border-radius: 5px;
+            width: 218px;
+        }
+        input[type="submit"] {
+            padding: 9px 23px;
+            font-size: 11px;
+            height: 34px;
+        }
+        textarea {
+            border-radius: 5px;
+            border: 1px solid #bababa;
+            width: 100%;
+            height: 122px;
+            margin-bottom: 10px;
+        }
+        &>div {
+            display: flex;
+            flex-direction: column;
+            width: 69%;
+            span {
+                font-size: 11px;
+                a {
+                    color: $pink;
+                }
             }
         }
-        .slick-slide img {
-            max-width: 100%;
-        }
-    }
-    .breadcrumbs ul {
-        display: flex;
-        li a {
-            color: #ababab;
-        }
-    }
-    .rate {
-        display: block;
-        float: none;
-    }
-    h2 {
-        font-size: 24px;
-        font-weight: 700;
     }
 }
-.item .header {
-    margin-bottom: 24px;
-}
+
 .item .related {
-    .wrapper {
-        display: flex;
-        overflow-y: scroll;
-        overflow-x: visible;
-        .item {
-            margin-right: 25px;
-        }
+    h2 {
+        font-weight: 700px !important;
+        margin-bottom: 24px;
     }
-}
-.item .reviews {
-    margin-bottom: 49px;
-    .wrapper  {
-        padding: 42px 79px;
-        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
-    }
-    .list {
-        border-bottom: 1px solid $grey;
+    .item {
+        padding: 9px;
     }
 }

@@ -11,7 +11,13 @@ $(function(){
 		slidesToScroll: 1,
 		asNavFor: '.slider',
 		dots: true,
-		centerMode: true,
+		centerMode: false,
 		focusOnSelect: true
-	  });
+		});
+
+		$('.related .wrapper').scrollbar({
+			"showArrows": true,
+			"scrollx": "advanced",
+			"scrolly": "advanced"
+	});
 });

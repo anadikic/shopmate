@@ -10,17 +10,17 @@ body {
 		justify-content: space-between;
 
 		.left {
-			width: 65%;
+			width: 66%;
 		}
 	}
 
 	.white-block {
 		background-color: $white;
-		padding: 48px 15% 48px 10%;
+		padding: 48px 15% 48px 13%;
 
 		h2 {
 			max-width: 400px;
-			margin-bottom: 20px;
+			margin-bottom: 51px;
 			font-weight: 700;
 		}
 
@@ -34,9 +34,7 @@ body {
 
 	.black-block {
 		background-color: $dark;
-		padding: 20% 15% 20% 10%;
-		padding-top: 20%;
-		padding-bottom: 10%;
+		padding: 26% 15% 20% 10%;
 		display: flex;
 		align-items: center;
 
