@@ -20,10 +20,17 @@
     }
     .breadcrumbs ul {
         display: flex;
+        li a {
+            color: #ababab;
+        }
     }
     .rate {
         display: block;
         float: none;
+    }
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
     }
 }
 .item .header {
@@ -43,7 +50,7 @@
     margin-bottom: 49px;
     .wrapper  {
         padding: 42px 79px;
-        box-shadow: 0 0px 6px 1px rgba(0,0,0,0.1);
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
     }
     .list {
         border-bottom: 1px solid $grey;
