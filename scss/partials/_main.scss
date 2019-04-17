@@ -23,6 +23,13 @@ body {
 			margin-bottom: 20px;
 			font-weight: 700;
 		}
+
+		.input-wrapper {
+			height: 48px;
+			input {
+				height: 46px;
+			}
+		}
 	}
 
 	.black-block {

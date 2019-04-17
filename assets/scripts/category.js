@@ -5,10 +5,11 @@ $(function(){
 		max: 500,
 		values: [ 75, 300 ],
 		slide: function( event, ui ) {
-			$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+			$( "#lower" ).val("$" + ui.values[ 0 ] );
+			$( "#heigher" ).val("$" + ui.values[ 1 ] );
 		}
 	});
-	$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+	$( "#lower" ).val("$" + $( "#slider-range" ).slider( "values", 0 ));
+	$( "#heigher" ).val("$" + $( "#slider-range" ).slider( "values", 1 ));
 }
 );

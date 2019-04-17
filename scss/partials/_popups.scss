@@ -1,14 +1,29 @@
+%popup {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: $white;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
+    input {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 400px;
+        @include placeholder {
+            color: #b4b4b4;
+            font-weight: 400px;
+        }
+    }
+}
 .header .chart-wrapper {
     z-index: 9;
     .chart {
-        display: none;
-        position: absolute;
-        right: 0;
-        left: 0;
+        @extend %popup;
         top: 68px;
+    }
+    .inner {
         padding: 42px 80px;
-        background-color: $white;
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
     }
     .table {
         .row {
@@ -125,4 +140,50 @@
         letter-spacing: 1px;
         font-weight: 700;
     }
+    .buttons-wrapper {
+        background-color: #f7f7f7;
+        padding: 42px 80px;
+        display: flex;
+        justify-content: space-between;
+    }
 }
+.header .left {
+    position: relative;
+    .sign-in-wrapper {
+        @extend %popup;
+        top: 37px;
+        right: auto;
+        z-index: 4;
+        width: 500px;
+        padding: 42px 80px;
+        h2 {
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .bottom-links {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            a {
+                font-weight: 400;
+                font-size: 15px;
+                &:hover {
+                    color: $dark;
+                }
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        input {
+            width: 100%;
+        }
+        input[type='submit'].pink {
+            width: auto;
+            border-radius: 50px;
+        }
+    }
+} 

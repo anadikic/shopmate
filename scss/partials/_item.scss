@@ -39,3 +39,13 @@
         }
     }
 }
+.item .reviews {
+    margin-bottom: 49px;
+    .wrapper  {
+        padding: 42px 79px;
+        box-shadow: 0 0px 6px 1px rgba(0,0,0,0.1);
+    }
+    .list {
+        border-bottom: 1px solid $grey;
+    }
+}
