@@ -1,6 +1,7 @@
 //----------  layout
 //------------------------------------------------------------------------------
-html, body {
+html,
+body {
 	@include font-smoothing(antialiased);
 }
 
@@ -15,6 +16,7 @@ body {
 	padding: 10px;
 	transition: 0.2s linear;
 	position: relative;
+
 	@media only screen and (max-width: 319px) {
 		width: 320px;
 	}
@@ -49,6 +51,7 @@ body {
 	width: 100%;
 	max-width: 940px;
 	margin: 0 auto;
+
 	@media only screen and (max-width: 991px) {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -70,6 +73,7 @@ body {
 
 .color-options {
 	display: flex;
+
 	span {
 		width: 14px;
 		height: 14px;
@@ -77,27 +81,35 @@ body {
 		display: block;
 		margin-right: 7px;
 		position: relative;
+
 		&.pink {
 			background-color: $pink;
 		}
+
 		&.blue {
 			background-color: $blue;
 		}
+
 		&.green {
 			background-color: $green;
 		}
+
 		&.orange {
 			background-color: $orange;
 		}
+
 		&.yellow {
 			background-color: $yellow;
 		}
+
 		&.purple {
 			background-color: $purple;
 		}
+
 		&.green-smooth {
 			background-color: $green-smooth;
 		}
+
 		&.active {
 			&::before {
 				content: '';
@@ -118,6 +130,7 @@ body {
 	margin-bottom: 27px;
 	display: flex;
 	flex-wrap: wrap;
+
 	span {
 		padding: 5px 15px;
 		color: $grey;
@@ -127,9 +140,11 @@ body {
 		font-size: 13px;
 		min-width: 46px;
 		text-align: center;
+
 		&:hover {
 			cursor: pointer;
 		}
+
 		&.active {
 			background-color: $pink;
 			color: $white;
@@ -142,6 +157,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	.plus,
 	.minus {
 		width: 36px;
@@ -153,10 +169,12 @@ body {
 		justify-content: center;
 		color: $dark;
 		position: relative;
+
 		&:hover {
 			background-color: #dbdbdb;
 		}
 	}
+
 	.minus::before,
 	.plus::before {
 		content: '';
@@ -165,10 +183,12 @@ body {
 		display: block;
 		height: 2px;
 	}
+
 	.plus {
 		&::before {
 			position: absolute;
 		}
+
 		&::after {
 			position: absolute;
 			content: '';
@@ -179,6 +199,7 @@ body {
 			transform: rotate(90deg);
 		}
 	}
+
 	.value {
 		width: 50px;
 		height: 36px;
@@ -192,10 +213,13 @@ body {
 		font-weight: 700;
 		text-align: center;
 	}
+
 	@media only screen and (max-width: 767px) {
+
 		.minus,
 		.plus {
 			height: 20px;
+
 			&::before,
 			&::after {
 				width: 15px;
