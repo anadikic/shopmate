@@ -6,7 +6,7 @@ $(function () {
 	addToChart();
 	buy();
 
-	$('.open-menu').click(function(){
+	$('.open-menu').click(function () {
 		$(this).toggleClass('open');
 		$('body').toggleClass('overflow-hidden');
 
@@ -18,14 +18,12 @@ $(function () {
 			//$(this).addClass('open');
 		}
 	});
-	
+
 });
 
-$(window).on('load', function () {
-});
+$(window).on('load', function () {});
 
-$(window).resize(function () {
-});
+$(window).resize(function () {});
 
 function openChart() {
 	$('.bag').on('click', function () {
@@ -73,66 +71,64 @@ function signIn() {
 		} else {
 			$('.sign-in-wrapper').hide('slow');
 		}
-		
+
 	});
 }
 
 function addToChart() {
 	$('.buy').on('click', function () {
-        var cart = $('.chart-wrapper .bag');
+		var cart = $('.chart-wrapper .bag');
 		var imgtodrag = $(this).parent().parent('.item').find(".img-wrapper img").eq(0);
 		var item = $(this).parent().parent('.item');
 
-        if (imgtodrag) {
-            var imgclone = imgtodrag.clone()
-                .offset({
-                top: imgtodrag.offset().top,
-                left: imgtodrag.offset().left
-            })
-                .css({
-                'opacity': '0.5',
-                    'position': 'absolute',
-                    'height': '150px',
-                    'width': '150px',
-                    'z-index': '100'
-            })
-                .appendTo($('body'))
-                .animate({
-                'top': cart.offset().top + 10,
-                    'left': cart.offset().left + 10,
-                    'width': 75,
-                    'height': 75
-            }, 1000, 'easeInOutExpo');
-            
-            setTimeout(function () {
-                cart.effect("shake", {
-                    times: 2
-                }, 200);
-            }, 1500);
+		if (imgtodrag) {
+			var imgclone = imgtodrag.clone()
+				.offset({
+					top: imgtodrag.offset().top,
+					left: imgtodrag.offset().left
+				})
+				.css({
+					'opacity': '0.5',
+					'position': 'absolute',
+					'height': '150px',
+					'width': '150px',
+					'z-index': '100'
+				})
+				.appendTo($('body'))
+				.animate({
+					'top': cart.offset().top + 10,
+					'left': cart.offset().left + 10,
+					'width': 75,
+					'height': 75
+				}, 1000, 'easeInOutExpo');
 
-            imgclone.animate({
-                'width': 0,
-                    'height': 0
-            }, function () {
-				
+			setTimeout(function () {
+				cart.effect("shake", {
+					times: 2
+				}, 200);
+			}, 1500);
+
+			imgclone.animate({
+				'width': 0,
+				'height': 0
+			}, function () {
+
 				item.remove();
 				$(this).detach();
 			});
-        }
-    });
+		}
+	});
 }
 
 function buy() {
-	$('.checkout').on('click', function(){
+	$('.checkout').on('click', function () {
 		$('.chart').fadeOut();
 		$('.truck').fadeIn();
 		$('.truck').animate({
 			right: "-370px"
-		}, 3000, function() {
-			$('.truck').css('display','none');
-			$('.truck').css('right','20vw');
+		}, 3000, function () {
+			$('.truck').css('display', 'none');
+			$('.truck').css('right', '20vw');
 		})
 	});
 }
-
-

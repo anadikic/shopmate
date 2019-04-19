@@ -3,12 +3,9 @@
 	width: 317px;
 	height: 151px;
 	position: fixed;
-	top: 80vh;
+	top: 50vh;
 	right: 20vw;
 	display: none;
-	@media only screen and (max-width: 767px) {
-		top: 50vh;
-	}
 }
 .truck * {
     position: absolute;
