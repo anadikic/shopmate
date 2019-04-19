@@ -11,5 +11,16 @@ $(function(){
 	});
 	$( "#lower" ).val("$" + $( "#slider-range" ).slider( "values", 0 ));
 	$( "#heigher" ).val("$" + $( "#slider-range" ).slider( "values", 1 ));
+
+	$('.summary .link').click(function(){
+		$(this).toggleClass('open');
+
+		if ($(this).hasClass('open')) {
+			$('.filter .white-part').slideDown();
+		} else {
+			$('.filter .white-part').slideUp();
+		}
+	});
 }
+
 );

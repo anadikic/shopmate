@@ -218,6 +218,19 @@ form {
 			}
 		}
 	}
+	@media only screen and (max-width: 767px) {
+		&.subscribe {
+			flex-direction: column;
+			align-items: flex-start;
+			.input-wrapper {
+				margin-bottom: 24px;
+				width: 100%;
+				input {
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 select {
@@ -225,7 +238,7 @@ select {
 	line-height: 30px;
 	padding-left: 10px;
 	width: 100%;
-	border: 1px solid $grey-light;
+	border: 1px solid $pink;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
@@ -234,7 +247,7 @@ select {
 	-webkit-appearance: none; // reset default style for iOS
 	background-image: url('../svg/ico-arrow-down.svg');
 	background-position: right 10px center;
-	background-size: 20px;
+	background-size: 10px;
 	background-repeat: no-repeat;
 	border-radius: 0; // again, removes border radius for iOS
 
@@ -437,3 +450,4 @@ a.link {
 		border-color: $pink;
 	}
 }
+

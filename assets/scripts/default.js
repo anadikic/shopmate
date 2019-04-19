@@ -5,6 +5,19 @@ $(function () {
 	signIn();
 	addToChart();
 	buy();
+
+	$('.open-menu').click(function(){
+		$(this).toggleClass('open');
+		$('body').toggleClass('overflow-hidden');
+
+		if ($(this).hasClass('open')) {
+			$('.main-nav').slideDown();
+			//$(this).removeClass('open');
+		} else {
+			$('.main-nav').slideUp();
+			//$(this).addClass('open');
+		}
+	});
 	
 });
 

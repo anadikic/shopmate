@@ -28,6 +28,9 @@
     .table {
         .row {
             display: flex;
+            .mod {
+                display: none;
+            }
         }
         .row.header {
             border-bottom: 1px solid #b4b4b4;
@@ -89,6 +92,60 @@
         padding: 42px 80px;
         display: flex;
         justify-content: space-between;
+    }
+    @media only screen and (max-width: 767px) {
+        .chart h3 {
+            padding: 25px 20px;
+        }
+        .chart .inner {
+            padding: 0 !important;
+        }
+        .row.header {
+            display: none;
+        }
+        span.mob {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 16px !important;
+            margin-right: 20px;
+        }
+        .row.body {
+            flex-direction: column;
+            padding: 20px;
+            margin-bottom: 0 !important;
+            .first-column {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .second-column {
+                width: 100%;
+                flex-direction: row;
+                justify-content: flex-start;
+                margin-bottom: 15px;
+                span {
+                    margin-bottom: 0;
+                    &.mob {
+                        margin-right: 15px;
+                    }
+                }
+            }
+            .third-column {
+                width: 100%;
+                justify-content: flex-start;
+                margin-bottom: 15px;
+            }
+            .fourth-column {
+                width: 100%;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            &:nth-child(odd) {
+                background-color: #f7f7f7;
+            }
+        }
+        .buttons-wrapper {
+            padding: 20px;
+        }
     }
 }
 .header .left {

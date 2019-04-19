@@ -106,9 +106,13 @@
 	@media only screen and (max-width: 767px) {
 		nav ul {
 			flex-wrap: wrap;
+			justify-content: flex-start;
 			li {
 				width: 33%;
 				margin-right: 0;
+				a {
+					font-size: 15px;
+				}
 			}
 		}
 		.bottom {

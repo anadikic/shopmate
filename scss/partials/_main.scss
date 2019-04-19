@@ -72,6 +72,24 @@ body {
 			}
 		}
 	}
+	@media only screen and (max-width: 768px) {
+		.white-block {
+			padding: 20px;
+		}
+		.black-block {
+			padding: 30px 20px;
+			h1 {
+				font-size: 24px;
+				line-height: normal;
+			}
+		}
+		.img-block {
+			padding: 20px;
+			&>div {
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 
 .close,

@@ -127,6 +127,29 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 991px) {
+		.breadcrumbs {
+			display: none;
+		}
+		.button-wrapper {
+			flex-direction: column;
+			.link.pink {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.wrapper {
+			flex-direction: column;
+		}
+		.left {
+			width: 100%;
+		}
+		.right {
+			width: auto;
+			padding: 20px;
+		}
+	}
 }
 
 .item .header {
@@ -140,7 +163,35 @@
 		.item {
 			margin-right: 25px;
 		}
-	}
+    }
+    .mcs-horizontal-example {
+        overflow-x: auto;
+        white-space: nowrap;
+        margin: 0 auto;
+    }
+    .mcs-horizontal-example .item {
+        display: inline-block;
+        padding: 20px;
+        width: 217px;
+        overflow: hidden;
+        margin-right: 20px;
+        text-align: center;
+        height: 325px;
+        span {
+            white-space: normal;
+        }
+        .buttons-wrapper {
+            text-align: center;
+            a {
+                width: auto;
+                margin: 0 auto;
+            }
+        }
+    }
+    h2 {
+        font-weight: 700px !important;
+        margin-bottom: 24px;
+    }
 }
 
 .item .reviews {
@@ -177,6 +228,36 @@
 		font-weight: 700;
 		margin-bottom: 48px;
 	}
+
+	.button-wrapper {
+		display: flex;
+		margin-top: 10px;
+		a {
+			display: flex;
+			color: #ababab;
+			margin-right: 30px;
+			i {
+				font-size: 20px;
+				margin-right: 10px;
+			}
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		h2 {
+			margin-bottom: 25px;
+		}
+		.wrapper {
+			padding: 20px;
+			.list {
+				.item {
+					flex-direction: column;
+				}
+				.item .left {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
 }
 
 .item .add-review {
@@ -191,11 +272,11 @@
             display: flex;
             align-items: flex-start;
         }
-        input[type="text"] {
+        input[type='text'] {
             border-radius: 5px;
             width: 218px;
         }
-        input[type="submit"] {
+        input[type='submit'] {
             padding: 9px 23px;
             font-size: 11px;
             height: 34px;
@@ -218,15 +299,39 @@
                 }
             }
         }
-    }
-}
-
-.item .related {
-    h2 {
-        font-weight: 700px !important;
-        margin-bottom: 24px;
-    }
-    .item {
-        padding: 9px;
-    }
+	}
+	.rate-wrapper {
+		display: flex;
+		&>label {
+			width: 31%;
+		}
+		.rate {
+			float: none;
+			label {
+				float: left;
+			}
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.form-field {
+			flex-direction: column;
+			align-items: flex-start;
+			input[type='text'],
+			textarea {
+				width: 100%;
+			}
+			&>label {
+				width: 100%;
+			}
+			&>div {
+				width: 100%;
+			}
+		}
+		.rate-wrapper {
+			flex-direction: column;
+			&>label {
+				width: 100%;
+			}
+		}
+	}
 }
