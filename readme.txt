@@ -37,4 +37,5 @@ EditorConfig helps developers define and maintain consistent coding styles betwe
 - On the index.html page when you hover shirts toy will see buy button, if you click on it it should animate the shirt
 - Clicking on bag in the header you get the popup with list of items. Clicking on the "Checkout" button you should see the truck going away
 
-= Scss is used as well as HTML5
+- Scss is used as well as HTML5
+- JQuery for animations
